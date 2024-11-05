@@ -10,8 +10,6 @@ interface CardComponentProps {
     title: string;
     description: string;
     imageSrc: string;
-    linkUrl: string;
-    linkTitle: string;
   };
 }
 
@@ -44,9 +42,6 @@ function CardComponent({ item }: CardComponentProps) {
         <Collapse in={open}>
           <div id={`collapse-text-${item.id}`}>
             <Card.Text className="mt-3">{item.description}</Card.Text>
-            <Button href={item.linkUrl} className="pill-btn mt-2">
-              {item.linkTitle}
-            </Button>
           </div>
         </Collapse>
       </Card.Body>
