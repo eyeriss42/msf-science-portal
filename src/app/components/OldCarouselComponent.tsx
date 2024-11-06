@@ -1,4 +1,4 @@
-/* code before refactoring
+/* code before refactoring*/
 
 "use client";
 
@@ -84,4 +84,3 @@ function CarouselComponent() {
 }
 
 export default CarouselComponent;
-*/
