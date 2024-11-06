@@ -40,7 +40,6 @@ function MainSlide() {
             <Button
               href={linkUrl}
               className="pill-btn"
-              target="_self"
               rel="noreferrer"
             >
               {linkTitle}

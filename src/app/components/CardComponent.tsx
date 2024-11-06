@@ -22,13 +22,14 @@ function CardComponent({ item }: CardComponentProps) {
 
   return (
     <Card className="h-100">
-      <Image
-        src={item.imageSrc}
-        alt={item.title}
-        width={450}
-        height={250}
-        layout="responsive"
-      />
+      <div style={{ height: '250px', position: 'relative' }}>
+        <Image
+          src={item.imageSrc}
+          alt={item.title}
+          fill
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
       <Card.Body className="d-flex flex-column">
         <Card.Title>{item.title}</Card.Title>
         <Button
