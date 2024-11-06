@@ -24,6 +24,7 @@ const gridItems = [
   }
 ];
 
+//grid with individual cards inside
 function GridComponent() {
   return (
     <Row xs={1} md={2} lg={3} className="g-4 mt-4">

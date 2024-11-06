@@ -11,6 +11,7 @@ interface CardComponentProps {
     imageSrc: string;
 }
 
+//individual card from a grid
 function CardComponent({ id, title, description, imageSrc }: CardComponentProps) {
   const [open, setOpen] = useState(false);
 
@@ -36,7 +37,7 @@ function CardComponent({ id, title, description, imageSrc }: CardComponentProps)
           aria-expanded={open}
           className="mt-auto"
         >
-          {open ? 'Hide Details' : 'Learn more'}
+          {open ? 'Hide details' : 'Learn more'}
         </Button>
         <Collapse in={open}>
           <div id={`collapse-text-${id}`}>
