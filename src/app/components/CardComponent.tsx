@@ -5,15 +5,13 @@ import { Card, Button, Collapse } from 'react-bootstrap';
 import Image from 'next/image';
 
 interface CardComponentProps {
-  item: {
     id: number;
     title: string;
     description: string;
     imageSrc: string;
-  };
 }
 
-function CardComponent({ item }: CardComponentProps) {
+function CardComponent({ id, title, description, imageSrc }: CardComponentProps) {
   const [open, setOpen] = useState(false);
 
   function handleToggle() {
@@ -21,28 +19,28 @@ function CardComponent({ item }: CardComponentProps) {
   }
 
   return (
-    <Card className="h-100">
+    <Card>
       <div style={{ height: '250px', position: 'relative' }}>
         <Image
-          src={item.imageSrc}
-          alt={item.title}
+          src={imageSrc}
+          alt={title}
           fill
           style={{ objectFit: 'cover' }}
         />
       </div>
-      <Card.Body className="d-flex flex-column">
-        <Card.Title>{item.title}</Card.Title>
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
         <Button
           onClick={handleToggle}
-          aria-controls={`collapse-text-${item.id}`}
+          aria-controls={`collapse-text-${id}`}
           aria-expanded={open}
           className="mt-auto"
         >
           {open ? 'Hide Details' : 'Learn more'}
         </Button>
         <Collapse in={open}>
-          <div id={`collapse-text-${item.id}`}>
-            <Card.Text className="mt-3">{item.description}</Card.Text>
+          <div id={`collapse-text-${id}`}>
+            <Card.Text className="mt-3">{description}</Card.Text>
           </div>
         </Collapse>
       </Card.Body>
