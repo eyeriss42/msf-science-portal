@@ -7,7 +7,7 @@ This is a refactored page for the Science Portal take-home project. It is built 
 
 It accomplishes the following tasks:
 1. Breaking out the individual carousel slides into separate components.
-2. Extracting the first slide into its own component and display it prominently above the other slides.
+2. Extracting the first slide into its own component and displaying it prominently above the other slides.
 3. Converting the other slides into general card components.
 4. Implementing a dropdown functionality for the card components to reveal associated text when clicked.
 5. Arranging the card components in a grid layout.
